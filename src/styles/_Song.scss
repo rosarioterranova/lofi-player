@@ -4,4 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img {
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
 }

@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faPlay, faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons"
 
-export default function Player(){
+export default function Player({currentSong}){
     return <>
     <div className="player">
 
