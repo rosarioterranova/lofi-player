@@ -6,8 +6,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>Lo Fi Player</h1>
-      <Player />
       <Song />
+      <Player />
     </div>
   );
 }
