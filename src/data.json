@@ -1,0 +1,14 @@
+[
+	{
+		"artist": "Mild Wild",
+		"name": "Alright Okay",
+		"album": "Vol. 1",
+		"path": "./audio/Mild Wild - Alright Okay.mp3"
+	},
+	{
+		"artist": "Robert Farmer",
+		"name": "Any Fools Song",
+		"album": "Sketches for a New Album",
+		"path": "./audio/Robert Farmer - Any Fools Song"
+	}
+]
