@@ -5,6 +5,13 @@
   font-family: "New Tegomin", serif;
 }
 
+.App {
+  h1 {
+    text-align: center;
+    margin: 20px;
+  }
+}
+
 @import "./styles/Song";
 @import "./styles/Player";
 @import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
