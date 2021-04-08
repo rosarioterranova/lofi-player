@@ -1,6 +1,6 @@
-export default function LibrarySong({currentSong}){
+export default function LibrarySong({currentSong, selectSongHandler}){
     return <>
-        <div className="library-song">
+        <div className="library-song" onClick={() => selectSongHandler(currentSong.id)}>
             <img src={currentSong.cover} alt="song cover"/>
             <div className="info">
                 <p className="name">{currentSong.name}</p>
