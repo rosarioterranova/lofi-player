@@ -10,6 +10,17 @@
   color: white;
   background: rgba(0, 0, 0, 0.8);
   padding: 10px;
+  animation-name: slideInFromLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .library-song {
