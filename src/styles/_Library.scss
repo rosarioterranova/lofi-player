@@ -1,0 +1,24 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20em;
+  height: 100%;
+  box-shadow: 2px 2px 50px gray;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  img {
+    width: 20%;
+  }
+
+  .info {
+    text-align: left;
+    padding: 5px;
+  }
+}

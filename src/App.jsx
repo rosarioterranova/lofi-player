@@ -6,6 +6,7 @@ import getData from "./utils"
 //Components
 import Player from "./components/Player"
 import Song from "./components/Song"
+import Library from "./components/Library"
 
 export default function App() {
   const [songs, setSongs] = useState(getData())
@@ -24,6 +25,7 @@ export default function App() {
       <h1>Lo-Fi Player</h1>
       <Song currentSong={currentSong} />
       <Player currentSong={currentSong} changeSongHandler={changeSong} />
+      <Library songs={songs} />
     </div>
   );
 }
