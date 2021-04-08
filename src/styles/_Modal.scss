@@ -1,0 +1,30 @@
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    z-index: 3;
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  button {
+    margin: 10px;
+    cursor: pointer;
+  }
+}

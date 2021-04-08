@@ -7,6 +7,7 @@ import getData from "./utils"
 import Player from "./components/Player"
 import Song from "./components/Song"
 import Library from "./components/Library"
+import Modal from "./components/Modal"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faQuestionCircle} from "@fortawesome/free-solid-svg-icons"
 
@@ -14,6 +15,7 @@ export default function App() {
   const [songs, setSongs] = useState(getData())
   const [currentSong, setCurrentSong] = useState(songs[0])
   const [isLibraryShowed, setIsLibraryShowed] = useState(true)
+  const [isModalShowed, setisModalShowed] = useState(false)
 
   function changeSong(action){
     if(action === "next"){
@@ -29,7 +31,8 @@ export default function App() {
       <Song currentSong={currentSong} />
       <Player currentSong={currentSong} changeSongHandler={changeSong} />
       {isLibraryShowed? <Library songs={songs} /> : null }
-      <FontAwesomeIcon size="2x" className="question" icon={faQuestionCircle} />
+      <FontAwesomeIcon size="2x" className="question" icon={faQuestionCircle} onClick={()=> setisModalShowed(true)}/>
+      {isModalShowed? <Modal onClickhandler={()=> setisModalShowed(false)} /> : null}
     </div>
   );
 }
