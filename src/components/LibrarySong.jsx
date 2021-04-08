@@ -3,7 +3,7 @@ export default function LibrarySong({currentSong}){
         <div className="library-song">
             <img src={currentSong.cover} alt="song cover"/>
             <div className="info">
-                <p>{currentSong.name}</p>
+                <p className="name">{currentSong.name}</p>
                 <p>{currentSong.artist}</p>
                 <p>{currentSong.album}</p>
             </div>

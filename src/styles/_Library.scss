@@ -7,12 +7,22 @@
   box-shadow: 2px 2px 50px gray;
   overflow: scroll;
   overflow-x: hidden;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
 }
 
 .library-song {
   display: flex;
   align-items: center;
   padding: 5px;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+
   img {
     width: 20%;
   }
@@ -21,4 +31,21 @@
     text-align: left;
     padding: 5px;
   }
+
+  .name {
+    font-size: 1.2em;
+    text-decoration: underline;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
 }

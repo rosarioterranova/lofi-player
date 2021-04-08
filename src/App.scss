@@ -5,11 +5,28 @@
   font-family: "New Tegomin", serif;
 }
 
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(0, 0, 0, 0.4321078773306197) 100%
+  );
+}
+
 .App {
   h1 {
     text-align: center;
     margin: 20px;
   }
+}
+
+.question {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  cursor: pointer;
 }
 
 @import "./styles/Song";
