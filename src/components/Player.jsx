@@ -46,7 +46,7 @@ export default function Player({currentSong, changeSongHandler, audioRef, songIn
                 <FontAwesomeIcon onClick={() => changeSongHandler("next")} className="skip-forward" size="2x" icon={faAngleRight} />
             </div>
 
-            <audio src={currentSong.audio} ref={audioRef} onTimeUpdate={updateTime} onLoadedMetadata={updateTime} />
+            <audio src={currentSong.audio} ref={audioRef} onTimeUpdate={updateTime} onLoadedMetadata={updateTime} onEnded={() => changeSongHandler("next")} />
         </div>
     </>
 }

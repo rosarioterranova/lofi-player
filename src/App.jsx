@@ -24,12 +24,12 @@ export default function App() {
   //Refs
   const audioRef = useRef(null)
 
-  function changeSong(action){
+  async function changeSong(action){
     const index = songs.indexOf(currentSong)
     if(action === "next" && index !== songs.length-1){
-      setCurrentSong(songs[index + 1])
+      await setCurrentSong(songs[index + 1])
     } else if(action === "previous" && index !== 0){
-      setCurrentSong(songs[index - 1])
+      await setCurrentSong(songs[index - 1])
     }
     audioRef.current.play().then(() =>{
       audioRef.current.play()
