@@ -16,11 +16,8 @@ export default function App() {
   //States
   const [songs, setSongs] = useState(getData())
   const [currentSong, setCurrentSong] = useState(songs[0])
+  const [songInfo, setSongInfo] = useState({currentTime: 0, duration: 0 })
   const [isPlaying, setIsPlaing] = useState(false)
-  const [songInfo, setSongInfo] = useState({
-      currentTime: 0,
-      duration: 0
-  })
   const [isLibraryShowed, setIsLibraryShowed] = useState(false)
   const [isModalShowed, setisModalShowed] = useState(false)
 
@@ -29,9 +26,9 @@ export default function App() {
 
   function changeSong(action){
     const index = songs.indexOf(currentSong)
-    if(action === "next" && index != songs.length-1){
+    if(action === "next" && index !== songs.length-1){
       setCurrentSong(songs[index + 1])
-    } else if(action === "previous" && index != 0){
+    } else if(action === "previous" && index !== 0){
       setCurrentSong(songs[index - 1])
     }
     audioRef.current.play().then(() =>{

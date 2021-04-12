@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faPlay, faAngleLeft, faAngleRight, faPause} from "@fortawesome/free-solid-svg-icons"
 
 export default function Player({currentSong, changeSongHandler, audioRef, songInfo, setSongInfo, isPlaying, setIsPlaing}){
+
     function play(){
         audioRef.current.play()
         setIsPlaing(true)
@@ -10,14 +11,6 @@ export default function Player({currentSong, changeSongHandler, audioRef, songIn
     function pause(){
         audioRef.current.pause()
         setIsPlaing(false)
-    }
-
-    function back(){
-        changeSongHandler("previous")
-    }
-
-    function forward(){
-        changeSongHandler("next")  
     }
 
     function updateTime(e){
@@ -39,23 +32,21 @@ export default function Player({currentSong, changeSongHandler, audioRef, songIn
     }
 
     return <>
-    <div className="player">
+        <div className="player">
 
-        <div className="time-control">
-        <p>{songInfo.currentTime? formatTime(songInfo.currentTime) : "0:00"}</p>
-            <input type="range" min={0} max={songInfo.duration || "0" } value={songInfo.currentTime} onChange={dragCurrent} />
-            <p>{songInfo.duration? formatTime(songInfo.duration) : "-:-"}</p>
+            <div className="time-control">
+            <p>{songInfo.currentTime? formatTime(songInfo.currentTime) : "0:00"}</p>
+                <input type="range" min={0} max={songInfo.duration || "0" } value={songInfo.currentTime} onChange={dragCurrent} />
+                <p>{songInfo.duration? formatTime(songInfo.duration) : "-:-"}</p>
+            </div>
+
+            <div className="play-control">
+                <FontAwesomeIcon onClick={() => changeSongHandler("previous")} className="skip-back" size="2x" icon={faAngleLeft} />
+                <FontAwesomeIcon onClick={isPlaying? pause : play} className="play" size="2x" icon={isPlaying? faPause : faPlay} />
+                <FontAwesomeIcon onClick={() => changeSongHandler("next")} className="skip-forward" size="2x" icon={faAngleRight} />
+            </div>
+
+            <audio src={currentSong.audio} ref={audioRef} onTimeUpdate={updateTime} onLoadedMetadata={updateTime} />
         </div>
-
-        <div className="play-control">
-            <FontAwesomeIcon onClick={back} className="skip-back" size="2x" icon={faAngleLeft} />
-            
-            {isPlaying? <FontAwesomeIcon onClick={pause} className="play" size="2x" icon={faPause} /> : <FontAwesomeIcon onClick={play} className="play" size="2x" icon={faPlay} />}
-            
-            <FontAwesomeIcon onClick={forward} className="skip-forward" size="2x" icon={faAngleRight} />
-        </div>
-
-        <audio src={currentSong.audio} ref={audioRef} onTimeUpdate={updateTime} onLoadedMetadata={updateTime} />
-    </div>
     </>
 }
