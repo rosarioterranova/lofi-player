@@ -10,8 +10,18 @@
   color: white;
   background: rgba(0, 0, 0, 0.8);
   padding: 10px;
+}
+
+.slideIn {
   animation-name: slideInFromLeft;
   animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.slideOut {
+  animation-name: slideOutFromLeft;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideInFromLeft {
@@ -20,6 +30,17 @@
   }
   100% {
     transform: translateX(0);
+    display: block;
+  }
+}
+
+@keyframes slideOutFromLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+    display: none;
   }
 }
 

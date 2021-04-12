@@ -58,7 +58,7 @@ export default function App() {
       />
       
       <FontAwesomeIcon size="2x" className="menu" icon={faBars} onClick={() => setIsLibraryShowed(!isLibraryShowed)} />
-      {isLibraryShowed? <Library songs={songs} selectSongHandler={selectSong} /> : null }
+      <Library songs={songs} selectSongHandler={selectSong} isLibraryShowed={isLibraryShowed} />
       
       <FontAwesomeIcon size="2x" className="question" icon={faQuestionCircle} onClick={()=> setisModalShowed(true)}/>
       {isModalShowed? <Modal onClickhandler={()=> setisModalShowed(false)} /> : null}
