@@ -43,7 +43,7 @@ export default function Player({currentSong, changeSongHandler, audioRef, songIn
 
         <div className="time-control">
         <p>{songInfo.currentTime? formatTime(songInfo.currentTime) : "0:00"}</p>
-            <input type="range" min={0} max={songInfo.duration} value={songInfo.currentTime} onChange={dragCurrent} />
+            <input type="range" min={0} max={songInfo.duration || "0" } value={songInfo.currentTime} onChange={dragCurrent} />
             <p>{songInfo.duration? formatTime(songInfo.duration) : "-:-"}</p>
         </div>
 
