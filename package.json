@@ -1,7 +1,7 @@
 {
   "name": "lofi-player",
   "version": "0.1.0",
-  "homepage": "./build",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
