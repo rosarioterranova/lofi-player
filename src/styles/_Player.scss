@@ -7,7 +7,7 @@
 }
 
 .time-control {
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,9 +25,23 @@
 
 .play-control {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding: 1em;
-  width: 30%;
+  width: 80%;
   cursor: pointer;
+
+  .play {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .time-control {
+    width: 50%;
+  }
+  .play-control {
+    width: 50%;
+  }
 }
