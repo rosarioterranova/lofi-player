@@ -28,11 +28,16 @@ export default function App() {
   const audioRef = useRef(null)
 
   function changeSong(action){
-    if(action === "next"){
-      setCurrentSong(songs[1])
-    } else if(action === "previous"){
-      setCurrentSong(songs[0])
+    const index = songs.indexOf(currentSong)
+    if(action === "next" && index != songs.length-1){
+      setCurrentSong(songs[index + 1])
+    } else if(action === "previous" && index != 0){
+      setCurrentSong(songs[index - 1])
     }
+    audioRef.current.play().then(() =>{
+      audioRef.current.play()
+      setIsPlaing(true)
+    })
   }
 
   function selectSong(id){
