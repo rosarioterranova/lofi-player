@@ -29,7 +29,7 @@ export default function getData(){
         {
             id: uuidv4(),
             artist: "Kecap Tuyul",
-            name: "The Snake's Shiny New Skin",
+            name: "Snake's Shiny Skin",
             album: "My Other Shadow",
             audio: "https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/L9R0mPV8out7IGcIisWw9xKR6p57oWOkxcv8CWYg.mp3",
             cover: "https://freemusicarchive.org/image?file=image%2Fg0sldMqeKKqqtbixRK0ZrhypIch5vJgXL7t0PwVX.jpeg&width=290&height=290&type=image"

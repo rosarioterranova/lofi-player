@@ -34,6 +34,16 @@
   .play {
     margin-left: 40%;
     margin-right: 40%;
+    &:hover {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .skip-back,
+  .skip-forward {
+    &:hover {
+      color: rgba(0, 0, 0, 0.5);
+    }
   }
 }
 
